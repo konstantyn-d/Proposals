@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kostiantyn_Dolyna_Proposals</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    .proposal-btn {
+      background: #555;
+      color: white;
+      padding: 10px 20px;
+      margin: 0 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .proposal-btn:hover {
+      background: #222;
+    }
+
+    /* Выделение кнопки SkinSense */
+    .proposal-btn.skinsense {
+      background: #4CAF50;
+      font-size: 18px;
+      padding: 12px 28px;
+      font-weight: bold;
+    }
+
+    .proposal-btn.skinsense:hover {
+      background: #45a049;
+    }
+
+    .proposal-section {
+      display: none;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 700px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .proposal-section h2 {
+      margin-top: 0;
+    }
+
+    .proposal-section ul {
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+
+    .proposal-section.active {
+      display: block;
+    }
+
+    /* SkinSense выделена */
+    #proposal-2.highlight {
+      border: 2px solid #4CAF50;
+      background: #f9fff9;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Project Proposals</h1>
+  </header>
+
+  <nav>
+    <button class="proposal-btn" onclick="showProposal('proposal-1')">FitMeal Planner</button>
+    <button class="proposal-btn skinsense" onclick="showProposal('proposal-2')">SkinSense</button>
+    <button class="proposal-btn" onclick="showProposal('proposal-3')">EventRadar</button>
+  </nav>
+
+  <main>
+    <!-- Proposal 1 -->
+    <section id="proposal-1" class="proposal-section">
+      <h2>FitMeal Planner</h2>
+      <p><strong>One-liner:</strong> A digital meal planning tool for people who want to eat healthier with less effort.</p>
+      <p><strong>Problem & Audience:</strong> Many people struggle to plan balanced meals and often rely on fast food. FitMeal Planner targets busy students and professionals who want to save time and stay healthy.</p>
+      <p><strong>Core Features (MVP):</strong></p>
+      <ul>
+        <li>Personalized weekly meal plans</li>
+        <li>Recipe suggestions with calorie info</li>
+        <li>Shopping list generator</li>
+        <li>Dietary preference filters</li>
+        <li>Simple, mobile-friendly design</li>
+      </ul>
+    </section>
+
+    <!-- Proposal 2 -->
+    <section id="proposal-2" class="proposal-section active highlight">
+      <h2>SkinSense</h2>
+      <p><strong>One-liner:</strong> A smart web app that scans your skin with your camera and gives personalized care advice.</p>
+      <p><strong>Problem & Audience:</strong> Skincare advice is often generic, leaving people unsure which products or routines fit their needs. SkinSense helps individuals who want tailored, science-based recommendations without visiting a dermatologist.</p>
+      <p><strong>Core Features (MVP):</strong></p>
+      <ul>
+        <li>Access to user’s camera for live skin scan (with consent)</li>
+        <li>Detection of dryness, acne, redness, or early aging signs</li>
+        <li>Personalized skincare routine suggestions</li>
+        <li>Product recommendations based on results</li>
+        <li>Progress tracking with “skin diary” option</li>
+        <li>Simple reports with easy-to-read feedback</li>
+        <li>Future option: connect with dermatologists online</li>
+      </ul>
+    </section>
+
+    <!-- Proposal 3 -->
+    <section id="proposal-3" class="proposal-section">
+      <h2>EventRadar</h2>
+      <p><strong>One-liner:</strong> A web app to discover events happening near you in real time.</p>
+      <p><strong>Problem & Audience:</strong> People often miss interesting local events because information is scattered across platforms. EventRadar targets students and young professionals who want an easy way to find concerts, workshops, and meetups nearby.</p>
+      <p><strong>Core Features (MVP):</strong></p>
+      <ul>
+        <li>Event discovery by location and date</li>
+        <li>Filters by interest (music, sports, tech, etc.)</li>
+        <li>Map-based event search</li>
+        <li>Save & share events with friends</li>
+        <li>Mobile-friendly UI</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    function showProposal(id) {
+      document.querySelectorAll('.proposal-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
